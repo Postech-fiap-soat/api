@@ -48,4 +48,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: docker ps
+    - run: docker-compose up
+    - run: npm run test:e2e
