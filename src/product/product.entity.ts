@@ -9,6 +9,7 @@ export class Product {
   @PrimaryGeneratedColumn()
   @ApiProperty()
   id: number;
+  
 
   @Column()
   @ApiProperty()
