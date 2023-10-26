@@ -1,5 +1,7 @@
 name: Continuous Integration
 on: 
+  push:
+    branches: [ cicd ]
   pull_request:
     branches: [ dev, main ]
 jobs:
@@ -29,4 +31,19 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm test
+  
+  run-ci:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 16.x
+        cache: 'npm'
+    - run: npm run test:cov
+    # - name: SonarCloud Scan
+    #   uses: SonarSource/sonarcloud-github-action@master
+    #   env:
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   
