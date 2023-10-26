@@ -32,7 +32,8 @@ jobs:
     - run: npm install
     - run: npm test
   
-  run-ci:
+  sonar-scanner:
+    name: Scanner Quality Code
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
