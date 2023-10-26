@@ -1,7 +1,7 @@
-name: soat-workflow
+name: Continuous Delivery
 on: 
   push:
-    branches: [ main, cicd ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 jobs:
