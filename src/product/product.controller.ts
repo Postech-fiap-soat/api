@@ -83,4 +83,11 @@ export class ProductController {
     var error = new Error()
     return this.reponseHttpHelper.handleException(error);
   }
+
+  @Get('/teste3')
+  @ApiOperation({ summary: 'get teste' })
+  async getTest3(): Promise<ResponseDTO> {
+    var error = new Error()
+    return this.reponseHttpHelper.handleException(error);
+  }
 }
