@@ -69,4 +69,10 @@ export class ProductController {
       return this.reponseHttpHelper.handleException(error);
     }
   }
+
+  @Get()
+  async test(): Promise<ResponseDTO> {
+    var error = new Error()
+    return this.reponseHttpHelper.handleException(error);
+  }
 }
