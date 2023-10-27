@@ -69,6 +69,4 @@ export class ProductController {
       return this.reponseHttpHelper.handleException(error);
     }
   }
-
-
 }
